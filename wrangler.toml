@@ -1,6 +1,6 @@
-name = "codespaces-blank"
+name = "denki-line-bot"
 main = "src/index.ts"
 compatibility_date = "2023-01-03"
 
 [triggers]
-crons = [ "1 * * * *" ]
+crons = [ "*/30 * * * *" ]

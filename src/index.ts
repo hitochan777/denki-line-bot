@@ -9,6 +9,9 @@
  *
  * Learn more at https://developers.cloudflare.com/workers/runtime-apis/scheduled-event/
  */
+import line from "./line";
+import LineClient from "./line"
+import { TextMessage } from "@line/bot-sdk";
 
 export interface Env {
 	// Example binding to KV. Learn more at https://developers.cloudflare.com/workers/runtime-apis/kv/
@@ -27,6 +30,8 @@ export default {
 		env: Env,
 		ctx: ExecutionContext
 	): Promise<void> {
-		
+		const now = new Date().toISOString();
+		const message: TextMessage = { type: 'text', text: `Current time is ${now}` };
+		line.broadcast(message);
 	},
 };

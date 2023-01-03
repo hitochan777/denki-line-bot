@@ -1,5 +1,5 @@
 {
-  "name": "codespaces-blank",
+  "name": "denki-line-bot",
   "version": "0.0.0",
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20221111.1",
@@ -10,5 +10,8 @@
   "scripts": {
     "start": "wrangler dev",
     "deploy": "wrangler publish"
+  },
+  "dependencies": {
+    "@line/bot-sdk": "^7.5.2"
   }
 }
