@@ -1,6 +1,12 @@
 name = "denki-line-bot"
 main = "src/index.ts"
 compatibility_date = "2023-01-03"
+node_compat = true
 
 [triggers]
 crons = [ "*/30 * * * *" ]
+
+# The necessary secrets are:
+# - CHANNEL_ACCESS_TOKEN
+# - CHANNEL_SECRET
+# Run `echo <VALUE> | wrangler secret put <NAME>` for each of these
