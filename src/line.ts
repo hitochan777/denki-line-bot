@@ -29,7 +29,7 @@ class LineClient {
       throw new Error(await res.text());
     } catch (ex) {
       console.error(ex);
-      return false;
+      throw ex;
     }
   }
 }
