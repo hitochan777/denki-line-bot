@@ -13,7 +13,6 @@ export default class ElectricityCrawler {
     const minutesRangeIndex = Math.floor(
       (now.getHours() * 60 + now.getMinutes()) / 30
     );
-    console.log(`${this.url}/prices?select_area=${area}`);
     const queryString = new URLSearchParams({ select_area: area });
     const res = await fetch(`${this.url}/prices?${queryString}`, {
       method: "get",
@@ -23,7 +22,6 @@ export default class ElectricityCrawler {
         "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
       }
     });
-    console.log(res.url)
     if (res.ok) {
       const json: any = await res.json();
       const { level: levels, price_data } = json[TODAY_INDEX];
