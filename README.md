@@ -10,6 +10,7 @@ So you need to prepare infrastractures like LINE account etc by yourself.
 A scheduled function on Cloudflare fetches electricity prices from an external API every 30 mins (You can customize the frequency if you want).  
 If the price is on alert (expensive) o cheap, it sends a message to a LINE channel.
 
+Note that information from the external API only contains prices from Japanese electricity companies.
 # Requirements
 - Cloudflare account
 - LINE Channel access token / Channel secret
